@@ -9,6 +9,7 @@ void setup() {
 void loop() {
   // put your main code here, to run repeatedly:
   turnToGreen();
+  delay(5000);
   turnToRed();
 }
 
@@ -17,7 +18,7 @@ void turnToGreen() {
   for(int i = 0; i <= 255; i++) {
     analogWrite(3, i);
     analogWrite(11, 255 - i);
-    delay(5);
+    delay(25);
   }
 }
 
@@ -26,6 +27,6 @@ void turnToRed() {
   for(int i = 0; i <= 255; i++) {
     analogWrite(11, i);
     analogWrite(3, 255 - i);
-    delay(5);
+    delay(25);
   }
 }
